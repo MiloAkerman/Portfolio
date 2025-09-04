@@ -4,17 +4,44 @@
   --color-dark-overlay: #191919;
   --color-dark-bg: #202020;
   --color-eng-green: #9AD21B;
+  --color-eng-highlight: #B2FF03;
   --color-prog-blue: #4496FE;
   --color-des-white: #FFFFFF;
+  --color-highlight: #93AF26;
 
   --font-clear: "Jersey 10";
+  --font-sans: "Comic Sans MS"
 }
 
 html,
 body {
-  @apply bg-dark-bg;
+  @apply bg-[url(resources/portfoliobg.png)] bg-cover bg-center;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
+  }
+}
+
+.rightwardFish {
+  animation: rightwardFishAnim 5s infinite
+}
+.leftwardFish {
+  animation: leftwardFishAnim 5s infinite
+}
+
+@keyframes rightwardFishAnim {
+  from {
+    left: -400px;
+  }
+  to {
+    left: calc(100vw + 400px);
+  }
+}
+@keyframes leftwardFishAnim {
+  from {
+    left: calc(100vw + 400px);
+  }
+  to {
+    left: -400px;
   }
 }
