@@ -129,7 +129,7 @@ export function Landing() {
                             <div className="bg-highlight aspect-[20/3] w-[80%] rounded-full text-center
                                               cursor-pointer shadow-[inset_0_15px_10px_rgba(255,255,255,0.3)]"
                                   onClick={toggleFish}>
-                              <span className="text-[1.2rem] lg:text-[2.2rem] font-sans select-none">Activate Fish</span>
+                              <span className="text-[1.2rem] lg:text-[2.2rem] select-none">Activate Fish</span>
                             </div>
                           </div>
                         } colStart={3} rowStart={2} w={3} h={1} bg={CardType.DES} />
