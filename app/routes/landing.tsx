@@ -66,9 +66,9 @@ export function Landing() {
           }} onAnimationEnd={() => {newFish(fishObj.id)}}></img>
         })}
       </div>
-      <div className="w-full h-[60px] bg-dark-overlay"></div>
+      {/* <div className="w-full h-[60px] bg-dark-overlay"></div> */}
       <div className="flex flex-col items-center grow w-ful
-                      gap-[10vw] pt-[5vw] lg:gap-[60px] lg:pt-[50px]">
+                      gap-[10vw] pt-[8vw] lg:gap-[60px] lg:pt-[80px]">
         <div className="w-[80%] lg:w-[800px] h-auto">
           <div className="relative w-full aspect-[20/8] overflow">
             <div className="flex h-[90%] gap-[3%] items-center">
@@ -109,7 +109,9 @@ export function Landing() {
                             "app/resources/spectrogram_piha.png",
                             "app/resources/FullSystemDiagram.png"
                           ]} />
-                        } colStart={1} rowStart={1} w={2} h={2} bg={CardType.ENG} />
+                        } colStart={1} rowStart={1} w={2} h={2} 
+                        bg={CardType.ENG} 
+                        href="#stme4e" />
             <Highlight  title="BrushUp" 
                         subtitle="Art fighting game in React"
                         content={
@@ -117,7 +119,9 @@ export function Landing() {
                             "app/resources/Match.gif",
                             "app/resources/MatchStats.png"
                           ]} />
-                        } colStart={3} rowStart={1} w={3} h={1} bg={CardType.PROG} />
+                        } colStart={3} rowStart={1} w={3} h={1} 
+                        bg={CardType.PROG}
+                        href="#brushup" />
             <Highlight  title="Portfolio" 
                         subtitle="This website! Made in React / Tailwind"
                         content={
@@ -135,28 +139,82 @@ export function Landing() {
                             "app/resources/ouroboros1.png",
                             "app/resources/notforyou.png",
                             "app/resources/ouroboros2.png"
-                          ]} />} colStart={1} rowStart={3} w={3} h={1} bg={CardType.PROG} />
+                          ]} />} colStart={1} rowStart={3} w={3} h={1} 
+                          bg={CardType.PROG}
+                          href="#dotdotdash" />
             <Highlight  title="WolHub" 
                         subtitle="A reactive browser companion"
                         content={<Horizontal images={[
                             "app/resources/wolhub1.png",
                             "app/resources/wolhub2.png"
-                          ]} />} colStart={4} rowStart={3} w={2} h={1} bg={CardType.DES} />
+                          ]} />} colStart={4} rowStart={3} w={2} h={1} 
+                          bg={CardType.DES}
+                          href="#wolhub" />
           </div>
         </div>
         
         <div className="w-[80%] lg:w-[1000px]">
           <h2 className="text-[3em] lg:text-[4em]">Projects</h2>
           <div className="h-[2px] w-full bg-white opacity-35" />
-          <div className="w-full h-[1000px] flex flex-col">
-            <Project name="STM Audio Interface" duration="(Jun - Aug '25)" links={[{
-              url: "https://e4e.ucsd.edu/news-and-updates/acoustic-collar-reu-2025",
-              text: "Blog post"
-            }, {
-              url: "https://e4e.ucsd.edu/news-and-updates/acoustic-collar-reu-2025",
-              text: "Blog post 2"
-            }]} description="" />
-            <Project name="BrushUp" duration="(Jun - Aug '25)" links={[]} description="" />
+          <div className="w-full h-auto mb-[100px] flex flex-col">
+
+            <Project  id="rosenstein"
+                      name="IMU Development" 
+                      duration="(Mar '25 - Ongoing)" 
+                      links={[]} 
+                      description="Developing an SoM IMU for biomechanics research at Brown University, with the aim of measuring collisions using two ADXL accelerometers in a schematic and PCB designed and routed by myself." 
+                      type={CardType.ENG} 
+                      image="app/resources/schematic.png" />
+
+            <Project  id="stme4e"
+                      name="ULP STM Audio Interface" 
+                      duration="(Jun - Aug '25)" 
+                      links={[{
+                        url: "https://e4e.ucsd.edu/news-and-updates/acoustic-collar-reu-2025",
+                        text: "Blog post"
+                      }, {
+                        url: "https://github.com/UCSD-E4E/STM32-PowerStudies",
+                        text: "GitHub Repo"
+                      }]} 
+                      description="Developed and optimized low-power TinyML firmware at UC San Diego for bioacoustic collars designed to record, filter, and export vocalization data for pandas, polar bears, and burrowing owls." 
+                      type={CardType.ENG} 
+                      image="app/resources/spectrogram_piha.png" />
+
+            <Project  id="brushup"
+                      name="BrushUp" 
+                      duration="(Jun '25 - Ongoing)" 
+                      links={[]} 
+                      description={`WEBSITE LAUNCH IN PROGRESS!\nArt fighting game built in React with PostgreSQL backend. Intended to use as (slightly more competitive!) sketching practice, first launching at RISD!`}
+                      type={CardType.PROG}
+                      image="app/resources/Match.gif" />
+
+            <Project  id="dotdotdash"
+                      name="Dotdotdash" 
+                      duration="(Feb - May '22)" 
+                      links={[{
+                        url: "https://bitselk.github.io/dotdotdash/notforyou/",
+                        text: "notforyou"
+                      }, {
+                        url: "https://bitselk.github.io/dotdotdash/tildeathdouspart/",
+                        text: "tildeath"
+                      }, {
+                        url: "https://bitselk.github.io/dotdotdash/ouroboros/",
+                        text: "ouroboros"
+                      }]} 
+                      description={`A series of short, focused horror games built fully online in Three.js, with no game engine.`}
+                      type={CardType.PROG}
+                      image="app/resources/notforyou.png" />
+
+            <Project  id="wolhub"
+                      name="Wolhub" 
+                      duration="(Mar - Jun '22)" 
+                      links={[{
+                        url: "https://chromewebstore.google.com/detail/wolhub/obekkhkjfjaifjfagmiipodghgddojna?hl=en-US",
+                        text: "Chrome Web Store"
+                      }]} 
+                      description="A lightweight, reactive browser companion, customizable and reactive to the current page. Built for a friend! Models made by hand in Blender."
+                      type={CardType.DES}
+                      image="app/resources/wolhub2.png" />
           </div>
         </div>
       </div>
