@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "type": "module",
-  "homepage": "https://miloakerman.github.io/",
+  "homepage": "https://miloakerman.github.io/portfolio",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
