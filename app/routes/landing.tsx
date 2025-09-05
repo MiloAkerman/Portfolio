@@ -4,7 +4,7 @@ import { Horizontal, Vertical } from "~/modules/imagedisplays";
 import { Project } from "~/modules/project";
 
 const NUM_FISH = 15;
-const FISH_URL = "app/resources/Trout.png"
+const FISH_URL = "/assets/Trout.png"
 type FishObject = {
   id: number,
   height: number,
@@ -87,13 +87,13 @@ export function Landing() {
                                 hover:scale-110 duration-100 px-[5%] flex items-center justify-center"
                                 onClick={redirectGithub}>
                   <span className="text-[1rem] sm:text-[2rem]">GitHub</span>
-                  <img src="app/resources/github-mark-white.svg" className="h-[60%] ml-[5%]" />
+                  <img src="/assets/github-mark-white.svg" className="h-[60%] ml-[5%]" />
                 </div>
                 <div className="w-[30%] h-full bg-prog-blue/50 backdrop-blur-[5px] rounded-[1vw] 
                                 hover:scale-110 duration-100 px-[5%] flex items-center justify-center"
                                 onClick={redirectLinkedin}>
                   <span className="text-[1rem] sm:text-[2rem]">LinkedIn</span>
-                  <img src="app/resources/InBug-White.png" className="h-[60%] ml-[5%]" />
+                  <img src="/assets/InBug-White.png" className="h-[60%] ml-[5%]" />
                 </div>
             </div>
           </div>
@@ -105,9 +105,9 @@ export function Landing() {
                         subtitle="Low-power inference on an STM32 for bear vocalization classification @ UC San Diego"
                         content={
                           <Vertical images={[
-                            "app/resources/lora_cropped.png",
-                            "app/resources/spectrogram_piha.png",
-                            "app/resources/FullSystemDiagram.png"
+                            "/assets/lora_cropped.png",
+                            "/assets/spectrogram_piha.png",
+                            "/assets/FullSystemDiagram.png"
                           ]} />
                         } colStart={1} rowStart={1} w={2} h={2} 
                         bg={CardType.ENG} 
@@ -116,8 +116,8 @@ export function Landing() {
                         subtitle="Art fighting game in React"
                         content={
                           <Horizontal images={[
-                            "app/resources/Match.gif",
-                            "app/resources/MatchStats.png"
+                            "/assets/Match.gif",
+                            "/assets/MatchStats.png"
                           ]} />
                         } colStart={3} rowStart={1} w={3} h={1} 
                         bg={CardType.PROG}
@@ -136,17 +136,17 @@ export function Landing() {
             <Highlight  title="Dotdotdash" 
                         subtitle="A series of horror games built on Three.js"
                         content={<Horizontal images={[
-                            "app/resources/ouroboros1.png",
-                            "app/resources/notforyou.png",
-                            "app/resources/ouroboros2.png"
+                            "/assets/ouroboros1.png",
+                            "/assets/notforyou.png",
+                            "/assets/ouroboros2.png"
                           ]} />} colStart={1} rowStart={3} w={3} h={1} 
                           bg={CardType.PROG}
                           href="#dotdotdash" />
             <Highlight  title="WolHub" 
                         subtitle="A reactive browser companion"
                         content={<Horizontal images={[
-                            "app/resources/wolhub1.png",
-                            "app/resources/wolhub2.png"
+                            "/assets/wolhub1.png",
+                            "/assets/wolhub2.png"
                           ]} />} colStart={4} rowStart={3} w={2} h={1} 
                           bg={CardType.DES}
                           href="#wolhub" />
@@ -164,7 +164,7 @@ export function Landing() {
                       links={[]} 
                       description="Developing an SoM IMU for biomechanics research at Brown University, with the aim of measuring collisions using two ADXL accelerometers in a schematic and PCB designed and routed by myself." 
                       type={CardType.ENG} 
-                      image="app/resources/schematic.png" />
+                      image="/assets/schematic.png" />
 
             <Project  id="stme4e"
                       name="ULP STM Audio Interface" 
@@ -178,7 +178,7 @@ export function Landing() {
                       }]} 
                       description="Developed and optimized low-power TinyML firmware at UC San Diego for bioacoustic collars designed to record, filter, and export vocalization data for pandas, polar bears, and burrowing owls." 
                       type={CardType.ENG} 
-                      image="app/resources/spectrogram_piha.png" />
+                      image="/assets/spectrogram_piha.png" />
 
             <Project  id="brushup"
                       name="BrushUp" 
@@ -186,7 +186,7 @@ export function Landing() {
                       links={[]} 
                       description={`WEBSITE LAUNCH IN PROGRESS!\nArt fighting game built in React with PostgreSQL backend. Intended to use as (slightly more competitive!) sketching practice, first launching at RISD!`}
                       type={CardType.PROG}
-                      image="app/resources/Match.gif" />
+                      image="/assets/Match.gif" />
 
             <Project  id="dotdotdash"
                       name="Dotdotdash" 
@@ -203,7 +203,7 @@ export function Landing() {
                       }]} 
                       description={`A series of short, focused horror games built fully online in Three.js, with no game engine.`}
                       type={CardType.PROG}
-                      image="app/resources/notforyou.png" />
+                      image="/assets/notforyou.png" />
 
             <Project  id="wolhub"
                       name="Wolhub" 
@@ -214,7 +214,7 @@ export function Landing() {
                       }]} 
                       description="A lightweight, reactive browser companion, customizable and reactive to the current page. Built for a friend! Models made by hand in Blender."
                       type={CardType.DES}
-                      image="app/resources/wolhub2.png" />
+                      image="/assets/wolhub2.png" />
           </div>
         </div>
       </div>

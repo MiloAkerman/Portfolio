@@ -2,13 +2,10 @@
   "name": "portfolio",
   "private": true,
   "type": "module",
-  "homepage": "https://miloakerman.github.io/portfolio",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build/client",
-    "start": "react-router-serve ./build/server/index.js",
+    "deploy": "npm run build && git subtree split --prefix build/client -b gh-pages-temp && git push origin gh-pages-temp:gh-pages --force && git branch -D gh-pages-temp",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {

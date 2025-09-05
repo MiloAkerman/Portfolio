@@ -16,7 +16,7 @@
 
 html,
 body {
-  @apply bg-[url(resources/portfoliobg.png)] bg-cover bg-center;
+  @apply bg-[url(assets/portfoliobg.png)] bg-cover bg-center;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
